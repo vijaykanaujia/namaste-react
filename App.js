@@ -1,15 +1,30 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-const heading = React.createElement("div", {}, [
-  React.createElement("h2", {}, "Hi i am from React"),
-  React.createElement("div", { class: "card" }, [
-    React.createElement("div", { class: "card-header" }, [
-      React.createElement("h3", { class: "title" }, "Title"),
-      React.createElement("h6", { class: "subtitle" }, "Subitle"),
-    ]),
-    React.createElement("div", { class: "card-body" }, 'Content'),
-    React.createElement("div", { class: "card-footer" }, 'Footer'),
-  ]),
-]);
+
+const elem = <span>Reaact Element + </span>;
+const Title = () => (
+  <h1 className="">
+    {elem}
+    Namaste React Using JSX
+  </h1>
+);
+
+//component composition
+const HeadingComponent = () => {
+  return (
+    // <React.Fragment></React.Fragment>
+    <>
+      <div id="container">
+        {Title()}
+        <Title />
+        <Title></Title>
+        <h1 className="heading">
+          Namaste React function component {100 + 200}
+        </h1>
+      </div>
+      <div className="container-2">React fregment</div>
+    </>
+  );
+};
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(heading);
+root.render(<HeadingComponent />);
