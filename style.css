@@ -1,24 +1,67 @@
-.card{
-    border: 1px solid #ddd;
-    box-shadow: 1px 1px 1px #ddd;
-    padding: 4px;
-    margin-bottom: 4px;
-}
-
-.card-header .title{
+body{
     margin: 0px;
-    padding: 2px;
 }
-.card-header .subtitle{
-    margin: 0px;
-    padding: 2px;
+.container {
+  width: 100%;
 }
 
-.card .card-body{
-    padding: 3px;
+#header {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  margin: 4px;
 }
 
-.card .card-footer{
-    background-color: aliceblue;
-    padding: 2;
+
+#header .logo-container img {
+  width: 200px;
+  height: 100px;
+}
+
+#menu_container ul.menu {
+  display: inline-flex;
+  list-style-type: none;
+  margin-right: 10px;
+}
+
+#menu_container ul.menu li.menu-item {
+  padding: 12px;
+  font-size: 21px;
+}
+
+#search_bar {
+  padding: 10px 0px;
+}
+
+#search_bar {
+  text-align: right;
+}
+#search_bar input {
+  height: 38px;
+  width: 300px;
+  margin-right: 2px;
+}
+
+/* card related css */
+#restaurent_card_container {
+  display: flex;
+  justify-content: left;
+}
+
+#restaurent_card_container > div.res-card {
+  width: 16.33%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  margin: 8px;
+}
+
+#restaurent_card_container > div.res-card img {
+  width: 100%;
+  height: 200px;
+}
+
+#footer {
+  text-align: center;
+  background-color: antiquewhite;
+  padding: 10px;
 }
