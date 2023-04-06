@@ -19,3 +19,29 @@
 - HTTPs
 - Tree Shaking - remove unused code
 - Diffrent dev and prod bundles
+
+#food ordering
+- Header
+ - Logo
+ - Nav Items
+- Body
+ - Search
+ - RestaurantContainer
+  - RestaurantCard
+   - Img
+   - Name of Res, Star Rating, Cusine, Dilevery time
+- Footer
+ - Copyright
+ - Links
+ - Address
+ - Contact Information
+
+ Two types of Export/import
+
+ - Default Export/import
+ export default Compoent
+ import Component from "path"
+
+ - Named const Compoent
+ export const Compoent
+ import {Compoent} from "path"
