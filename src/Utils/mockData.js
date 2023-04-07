@@ -14,7 +14,7 @@ const restaurentList = [
       name: "KFC",
       thumbnailUrl:
         "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/hbeotimtlfwmlg68iuca",
-      rating: 3.4,
+      rating: 4.1,
       cuisines: ["Burgers", "American"],
       costForTwo: 40000,
       deliveryTime: 20,

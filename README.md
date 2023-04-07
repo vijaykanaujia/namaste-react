@@ -20,7 +20,7 @@
 - Tree Shaking - remove unused code
 - Diffrent dev and prod bundles
 
-#food ordering
+# food ordering
 - Header
  - Logo
  - Nav Items
@@ -36,7 +36,7 @@
  - Address
  - Contact Information
 
- Two types of Export/import
+ # Two types of Export/import
 
  - Default Export/import
  export default Compoent
@@ -45,3 +45,8 @@
  - Named const Compoent
  export const Compoent
  import {Compoent} from "path"
+
+ # React Hooks
+  Normal JS utility function
+  - useState() - superpowerfull state variable
+  - useEffect()
