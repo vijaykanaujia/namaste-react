@@ -33,26 +33,32 @@ body{
   padding: 10px 0px;
 }
 
-#search_bar {
-  text-align: right;
-}
 #search_bar input {
   height: 38px;
   width: 300px;
   margin-right: 2px;
 }
 
+#searchButton{
+  padding: 9px 15px;
+}
+
+.filter-container{
+  padding: 0px 5px;
+}
+
 /* card related css */
 #restaurent_card_container {
   display: flex;
   justify-content: left;
+  flex-wrap: wrap;
 }
 
 #restaurent_card_container > div.res-card {
   width: 250px;
-  padding: 8px;
   border: 1px solid #ddd;
-  margin: 8px;
+  margin: 5px;
+  padding: 8px;
 }
 
 #restaurent_card_container > div.res-card img {
@@ -64,4 +70,9 @@ body{
   text-align: center;
   background-color: antiquewhite;
   padding: 10px;
+}
+
+button.login,button.logout{
+  padding: 5px;
+  margin: 0px 5px;
 }

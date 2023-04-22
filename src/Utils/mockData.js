@@ -11,7 +11,7 @@ const restaurentList = [
     },
     {
       id: 2,
-      name: "KFC",
+      name: "Burger King",
       thumbnailUrl:
         "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/hbeotimtlfwmlg68iuca",
       rating: 4.1,
