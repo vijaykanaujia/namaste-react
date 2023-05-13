@@ -3,18 +3,12 @@ import restaurentList from "../Utils/mockData";
 import RestaurantCard from "./RestaurantCard";
 import restaurentList from "./../Utils/mockData";
 import Shimmer from "./Shimmer";
+import { filterData } from "../Utils/helper";
 
 const Body = () => {
   const [filteredRestaurant, setFilteredRestaurant] = useState(restaurentList);
   const [allRestaurants, setAllRestaurants] = useState([]);
   const [searchText, setSearchText] = useState("");
-
-  const filterData = (searchText, restaurentList) => {
-    const filteredData = restaurentList.filter((res) => {
-      return res?.data?.name?.toLowerCase()?.includes(searchText.toLowerCase());
-    });
-    return filteredData;
-  };
 
   useEffect(() => {
     getRestaurants();
