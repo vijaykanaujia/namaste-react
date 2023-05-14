@@ -15,10 +15,18 @@ const Header = () => {
       </div>
       <div id="menu_container">
         <ul className="menu">
-          <li className="menu-item"><Link to="/">Home</Link></li>
-          <li className="menu-item"><Link to="/about">About</Link></li>
-          <li className="menu-item"><Link to="/contact">Contact Us</Link></li>
-          <li className="menu-item">Offer</li>
+          <li className="menu-item">
+            <Link to="/">Home</Link>
+          </li>
+          <li className="menu-item">
+            <Link to="/about">About</Link>
+          </li>
+          <li className="menu-item">
+            <Link to="/contact">Contact Us</Link>
+          </li>
+          <li className="menu-item">
+            <Link to="/instamart">Instamart</Link>
+          </li>
         </ul>
         {isLoggedIn ? (
           <button

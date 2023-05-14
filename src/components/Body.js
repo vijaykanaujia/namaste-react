@@ -4,6 +4,7 @@ import RestaurantCard from "./RestaurantCard";
 import restaurentList from "./../Utils/mockData";
 import Shimmer from "./Shimmer";
 import { filterData } from "../Utils/helper";
+import useOnline from "../Utils/useOnline";
 
 const Body = () => {
   const [filteredRestaurant, setFilteredRestaurant] = useState(restaurentList);
@@ -21,6 +22,12 @@ const Body = () => {
     const json = await data.json();
     setAllRestaurants(json?.data?.cards[2]?.data?.data?.cards || []);
     setFilteredRestaurant(json?.data?.cards[2]?.data?.data?.cards || []);
+  }
+
+  const isOnline = useOnline();
+
+  if (!isOnline) {
+    return <h1>🔴 You Are Offline Please check your internet connection!</h1>;
   }
 
   //not render component (early return)

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -10,6 +10,15 @@ import Contact from "./components/Contact";
 import RestaurantMenu from "./components/RestaurantMenu";
 import Profile from "./components/Profile";
 
+//chunking
+//code splitting
+//dynamic bundling
+//lazy loading
+//on demand loading
+//dynamic import
+
+const Instamart = lazy(() => import("./components/Instamart"));
+// upon on demand loading -> upon render -> suspend loading
 const AppLayout = () => {
   return (
     <div className="container">
@@ -51,6 +60,14 @@ const appRouter = createBrowserRouter([
       {
         path: "/restaurant/:id",
         element: <RestaurantMenu />,
+      },
+      {
+        path: "/instamart",
+        element: (
+          <Suspense fallback="...Loading">
+            <Instamart />
+          </Suspense>
+        ),
       },
     ],
   },
