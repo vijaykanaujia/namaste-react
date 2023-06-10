@@ -1,5 +1,9 @@
-body{
-    margin: 0px;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0px;
 }
 .container {
   width: 100%;
@@ -11,7 +15,6 @@ body{
   border: 1px solid #ddd;
   margin: 4px;
 }
-
 
 #header .logo-container img {
   width: 200px;
@@ -39,11 +42,11 @@ body{
   margin-right: 2px;
 }
 
-#searchButton{
+#searchButton {
   padding: 9px 15px;
 }
 
-.filter-container{
+.filter-container {
   padding: 0px 5px;
 }
 
@@ -72,7 +75,8 @@ body{
   padding: 10px;
 }
 
-button.login,button.logout{
+button.login,
+button.logout {
   padding: 5px;
   margin: 0px 5px;
 }
