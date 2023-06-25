@@ -1,15 +1,17 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import restaurentList from "../Utils/mockData";
 import RestaurantCard from "./RestaurantCard";
 import restaurentList from "./../Utils/mockData";
 import Shimmer from "./Shimmer";
 import { filterData } from "../Utils/helper";
 import useOnline from "../Utils/useOnline";
+import UserContext from "../Utils/UserContext";
 
 const Body = () => {
   const [filteredRestaurant, setFilteredRestaurant] = useState(restaurentList);
   const [allRestaurants, setAllRestaurants] = useState([]);
   const [searchText, setSearchText] = useState("");
+  const { user, setUser } = useContext(UserContext);
 
   useEffect(() => {
     getRestaurants();
@@ -57,6 +59,18 @@ const Body = () => {
           >
             Filter
           </button>
+          <input
+            type="text"
+            value={user.name}
+            name="nam"
+            onChange={(e) => setUser({ ...user, name: e.target.value })}
+          />
+          <input
+            type="email"
+            value={user.email}
+            name="email"
+            onChange={(e) => setUser({ ...user, email: e.target.value })}
+          />
         </div>
         <div id="filter_container">
           <button

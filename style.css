@@ -80,3 +80,8 @@ button.logout {
   padding: 5px;
   margin: 0px 5px;
 }
+
+input{
+  border: 1px solid black;
+  padding: 2px;
+}

@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from "react";
+import React, { Suspense, lazy, useState } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -9,6 +9,7 @@ import Error from "./components/Error";
 import Contact from "./components/Contact";
 import RestaurantMenu from "./components/RestaurantMenu";
 import Profile from "./components/Profile";
+import UserContext from "./Utils/UserContext";
 
 //chunking
 //code splitting
@@ -20,15 +21,21 @@ import Profile from "./components/Profile";
 const Instamart = lazy(() => import("./components/Instamart"));
 // upon on demand loading -> upon render -> suspend loading
 const AppLayout = () => {
+  const [user, setUser] = useState({
+    name: "override user",
+    email: "override_user@example.com",
+  });
   return (
     <div className="container">
-      <header>
-        <Header />
-      </header>
-      <Outlet />
-      <footer>
-        <Footer />
-      </footer>
+      <UserContext.Provider value={{ user: user, setUser: setUser }}>
+        <header>
+          <Header />
+        </header>
+        <Outlet />
+        <footer>
+          <Footer />
+        </footer>
+      </UserContext.Provider>
     </div>
   );
 };
