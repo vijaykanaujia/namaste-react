@@ -10,6 +10,8 @@ import Contact from "./components/Contact";
 import RestaurantMenu from "./components/RestaurantMenu";
 import Profile from "./components/Profile";
 import UserContext from "./Utils/UserContext";
+import { Provider } from "react-redux";
+import store from "./Utils/store";
 
 //chunking
 //code splitting
@@ -27,6 +29,7 @@ const AppLayout = () => {
   });
   return (
     <div className="container">
+      <Provider store={store}>
       <UserContext.Provider value={{ user: user, setUser: setUser }}>
         <header>
           <Header />
@@ -36,6 +39,7 @@ const AppLayout = () => {
           <Footer />
         </footer>
       </UserContext.Provider>
+      </Provider>
     </div>
   );
 };
