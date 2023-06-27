@@ -12,6 +12,7 @@ import Profile from "./components/Profile";
 import UserContext from "./Utils/UserContext";
 import { Provider } from "react-redux";
 import store from "./Utils/store";
+import Cart from "./components/Cart";
 
 //chunking
 //code splitting
@@ -80,6 +81,10 @@ const appRouter = createBrowserRouter([
           </Suspense>
         ),
       },
+      {
+        path: "/cart",
+        element: <Cart />,
+      }
     ],
   },
 ]);

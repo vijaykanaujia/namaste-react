@@ -34,7 +34,9 @@ const Header = () => {
             <Link to="/instamart">Instamart</Link>
           </li>
           <li className="menu-item">
+            <Link to="/cart">
             Cart <span>{cartItems.length}</span>
+            </Link>
           </li>
         </ul>
         {isLoggedIn ? (
