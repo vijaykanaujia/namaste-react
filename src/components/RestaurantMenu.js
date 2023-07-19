@@ -1,9 +1,7 @@
 import { useParams } from "react-router-dom";
 import useRestaurant from "../Utils/useRestaurant";
-import Profile from "./Profile";
 import { addItem } from "../Utils/cartSlice";
 import { useDispatch } from "react-redux";
-import { useState } from "react";
 import useMenuItem from "../Utils/useMenuItem";
 
 const RestaurantMenu = () => {

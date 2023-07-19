@@ -12,7 +12,7 @@ const cartSlice = createSlice({
         state.items.splice(state.items.indexOf(action.payload), 1);
     },
     clearCart: (state) => {
-        state.items = [];   ` `
+        state.items = [];
     },
   },
 });

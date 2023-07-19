@@ -1,7 +1,6 @@
 import { useState, useEffect, useContext } from "react";
 import restaurentList from "../Utils/mockData";
 import RestaurantCard from "./RestaurantCard";
-import restaurentList from "./../Utils/mockData";
 import Shimmer from "./Shimmer";
 import { filterData } from "../Utils/helper";
 import useOnline from "../Utils/useOnline";
