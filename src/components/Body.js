@@ -48,10 +48,12 @@ const Body = () => {
             value={searchText}
             placeholder="Search Restaurent"
             name="searchbar"
+            data-testid="search-input"
           />
           <button
             id="searchButton"
             type="button"
+            data-testid="search-btn"
             onClick={() => {
               setFilteredRestaurant(filterData(searchText, allRestaurants));
             }}
@@ -84,7 +86,7 @@ const Body = () => {
           </button>
         </div>
       </div>
-      <div id="restaurent_card_container">
+      <div id="restaurent_card_container" data-testid="res-list">
         {filteredRestaurant.length == 0 ? (
           <h1>No restaurant match your filter!!</h1>
         ) : (
